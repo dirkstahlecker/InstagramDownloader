@@ -22,7 +22,7 @@ class InstagramImport:
             char = char.lower()
 
             #words are URLs
-            if char == '{': #curly cbraces separate URLs
+            if char == '{': #curly braces separate URLs
                 inFrame = True
             elif char == '}':
                 inFrame = False
@@ -57,6 +57,7 @@ class InstagramImport:
 
     def printURLs(self):
         for url in self.URLs:
+            url = url.replace("\\/","/")
             print url
 
     #def writeToHTML(self):
